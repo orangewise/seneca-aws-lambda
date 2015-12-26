@@ -1,0 +1,36 @@
+{
+  "name": "seneca-aws-lambda",
+  "version": "1.0.0",
+  "description": "Use AWS Lambda",
+  "license": "MIT",
+  "repository": "blainsmith/seneca-aws-lambda",
+  "author": {
+    "name": "Blain Smith",
+    "email": "rebelgeek@blainsmith.com",
+    "url": "blainsmith.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {
+    "aws-sdk": "^2.2.26"
+  },
+  "peerDependencies": {
+    "aws-sdk": "^2.2.26"
+  },
+  "devDependencies": {
+    "ava": "^0.8.0",
+    "seneca": "^0.9.3",
+    "sinon": "^1.17.2",
+    "xo": "^0.12.1"
+  }
+}
