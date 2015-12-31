@@ -33,7 +33,7 @@ var seneca = require('seneca')();
 
 // Use a shared key string
 seneca.use('aws-lambda', {
-  instance: new AWS.Lambda({apiVersion: '2015-03-31'})
+	instance: new AWS.Lambda({apiVersion: '2015-03-31'})
 });
 ```
 
@@ -45,7 +45,7 @@ Refer to the [AWS SDK][aws-sdk-url] for authenticating to AWS prior to using thi
 `seneca-aws-lambda` provide the following actions. (all including the `{role: "aws-lambda"}`)
 
 #### invoke - run a lambda function
-- arguments: `functionName`  
+- arguments: `functionName`
 all other arguments are passed to the lambda function
 - result: *result of the lambda function*
 
@@ -57,6 +57,22 @@ seneca.act({role: 'aws-lambda', cmd: 'invoke', functionName: 'imgr-search', text
 
 	console.log(results); // Show the results of the lambda function
 });
+```
+
+You even just invoke a lambda function and not wait for the response. However, this still requires your lambda function to still call `context.done()` so seneca does not time out.
+
+**Lambda Function**
+```js
+exports.handler = function(event, context) {
+	context.done(); // Call done immediately to alert seneca
+
+	// Do some heavy lifting
+};
+```
+
+**Invoke with No Callback**
+```js
+seneca.act({role: 'aws-lambda', cmd: 'invoke', functionName: 'no-response', key: 'value'});
 ```
 
 ## Test
