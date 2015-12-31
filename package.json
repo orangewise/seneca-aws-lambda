@@ -1,6 +1,6 @@
 {
   "name": "seneca-aws-lambda",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Use AWS Lambda",
   "license": "MIT",
   "repository": "blainsmith/seneca-aws-lambda",
