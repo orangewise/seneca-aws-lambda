@@ -22,7 +22,7 @@
     ""
   ],
   "dependencies": {
-    "aws-sdk": "^2.2.26"
+    "aws-sdk": "^2.7.22"
   },
   "peerDependencies": {
     "aws-sdk": "^2.2.26"
