@@ -25,7 +25,7 @@
     "aws-sdk": "^2.2.26"
   },
   "peerDependencies": {
-    "aws-sdk": "^2.2.26"
+    "aws-sdk": "^2.7.27"
   },
   "devDependencies": {
     "ava": "^0.17.0",
